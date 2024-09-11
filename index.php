@@ -59,11 +59,13 @@
 					'job_summary'=> 'I was responsible for overseeing staff, ensuring that dailey tasks were done by the end of the day, 
 													counting out each cashiers cash register and the safe, taking the dailey deposit to the bank, and closing and opening the store.',
 					'achievement_header'=> 'During my time at Family Dollar I was an effective leader',
+					//array contains a list of your achievements on the job
 					'achievements' => [
 						'Stock was always ran on time',
 						'I saw that stock rotations were done regularly',
 						'I did weekly cycle counts to ensure our inventory numbers were correct'
 					],
+					//array contains each technology used on the job
 					'technologies_used' => [
 						'POS system'
 					]
@@ -158,11 +160,13 @@
 					'start_and_end_dates'=> '',
 					'job_summary'=> '',
 					'achievement_header'=> '',
+					//array contains a list of your achievements on the job
 					'achievements' => [
 						'',
 						'',
 						''
 					],
+					//array contains each technology used on the job
 					'technologies_used' => [
 						''
 					]
@@ -253,12 +257,13 @@
 					'start_and_end_dates'=> '',
 					'job_summary'=> '',
 					'achievement_header'=> '',
-					
+					//array contains a list of your achievements on the job
 					'achievements' => [
 						'',
 						'',
 						''
 					],
+					//array contains each technology used on the job
 					'technologies_used' => [
 						''
 					]
@@ -349,11 +354,13 @@
 					'start_and_end_dates'=> '',
 					'job_summary'=> '',
 					'achievement_header'=> '',
+					//array contains a list of your achievements on the job
 					'achievements' => [
 						'',
 						'',
 						''
 					],
+					//array contains each technology used on the job
 					'technologies_used' => [
 						''
 					]
