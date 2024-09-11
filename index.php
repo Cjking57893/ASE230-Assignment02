@@ -141,75 +141,79 @@
 		[
 			'img_path' => '',
 			'firstname'=>'Alanna',
-			'lastname'=>'',
-			'team_role' => '',
-			'email' => '',
-			'phone_number' => '',
-			'linked_in' => '',
-			'github' => '',
-			'website' => '',
-			'bio'=> '',
+			'lastname'=>'Evans',
+			'team_role' => 'Programmer',
+			'email' => 'evansa27@mymail.nku.edu',
+			'phone_number' => '(513)313-4015',
+			'linked_in' => 'www.linkedin.com/in/alanna-evans-095b02263',
+			'github' => 'https://github.com/evansa27',
+			'website' => 'n/a',
+			'bio'=> 'My name is Alanna Evans, and I am a senior working on my Bachelor of Science in Cybersecurity at Northern Kentucky University. I am also minoring in Computer Science and Computer Forensics as well. I have had multiple cybersecurtrity based internships at GE Aerospace. During my time here I worked on the Insider Threat and Data Protection Team, as well as the Cyber Intel and Active Defense Team. I have recently accpeted a postion as a DTLP within the company after I graduate. A few fun facts about me is that I recently traveled outside of the country for the first time, and I love going to concerts.',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
 			'job_experience' => [
 				//job 1
 				[
-					'job_title' => '',
-					'company_name'=> '',
-					'start_and_end_dates'=> '',
-					'job_summary'=> '',
-					'achievement_header'=> '',
+					'job_title' => 'Detection Engineer',
+					'company_name'=> 'GE Aerospace',
+					'start_and_end_dates'=> 'May 2024 - August 2024',
+					'job_summary'=> '-Led an intern-run threat hunt in which teamwork and collaboration were used to determine if a predetermined threat was a concern within the GE Aerospace network with a focus on certain tactics, techniques, and procedures
+							-Acted as a threat intel analyst and used Open-Source Intelligence to work through the threat intel pipeline and complete tasks such as conducting open-source intelligence, fulfilling 1 to 2 reports a week, and becoming familiar with threat intelligence tech stacks
+							-Completed professional development tasks such as attending educational meetings, networking events, and practicing leadership skills by hosting a staff meeting for digital technology interns and preparing for the CIO as a guest speaker',
+					'achievement_header'=> 'These are some of the achievements I have accomplished during this internship.',
 					//array contains a list of your achievements on the job
 					'achievements' => [
-						'',
-						'',
-						''
+						'Identified ways to improve GE\'s security',
+						'Got hands-on cyber experience',
+						'Identified ways to improve processes'
 					],
 					//array contains each technology used on the job
 					'technologies_used' => [
-						''
+						'OpenCTI',
+						'Cybersecurity Fundamentals',
+						'BDEP',
 					]
 				]
 			],
 			'skills' => [
-				'',
-				'',
-				'',
-				'',
+				'Leadership',
+				'HTML',
+				'CSS',
+				'Cybersecurity Knowledge & Fundamentals',
 			],
 			'other_skills' => [
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Word',
+				'Excel',
+				'PowerPoint',
+				'Teamwork',
+				'Communication',
+				'Negotiation'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['education'][$i]['study/school_name/start_and_end_dates']
 			*/
 			'education' => [
-				//scool 1
+				//school 1
 				[
-					'study'=> '',
-					'school_name'=> '',
-					'start_and_end_dates' => ''
+					'study'=> 'Bachelor of Science in Cybersecurity',
+					'school_name'=> 'Northern Kentucky University',
+					'start_and_end_dates' => '2021 - 2025'
 				],
 				//school 2
 				[
-					'study'=> '',
-					'school_name' => '',
-					'start_and_end_dates' => ''
+					'study'=> 'High School Diploma',
+					'school_name' => 'Bethel-Tate High School',
+					'start_and_end_dates' => '2017 - 2021'
 				]
 			],
 			'languages' => [
-				''
+				'English'
 			],
 			'interests'=> [
-				'',
-				'',
-				''
+				'Hiking',
+				'Pool',
+				'Video Games'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
@@ -218,20 +222,20 @@
 				//project 1
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => '',
+					'project_name' => 'VR',
+					'project_goal' => 'Worked closely with a professor to create a tour of the College of Informatics through VR',
 				],
 				//project 2
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
+					'project_name' => 'Cryptography',
+					'project_goal' => 'Created a Keyword Cipher Software for a cryptography course.'
 				],
 				//project 3
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
+					'project_name' => 'Chutes and Ladders',
+					'project_goal' => 'Wrote software in C that plays the game Chutes and Ladders.'
 				]
 			]
 		],
