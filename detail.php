@@ -212,24 +212,42 @@
 		[
 			'img_path' => '',
 			'firstname'=>'Cody',
-			'lastname'=>'',
-			'team_role' => '',
-			'email' => '',
-			'phone_number' => '',
-			'linked_in' => '',
-			'github' => '',
-			'website' => '',
-			'bio'=> '',
+			'lastname'=>'King',
+			'team_role' => 'Programmer',
+			'email' => 'cody.king04@outlook.com',
+			'phone_number' => '606-782-5551',
+			'linked_in' => 'linkedin.com/in/codyking57',
+			'github' => 'github.com/Cjking57893',
+			'website' => 'n/a',
+			'bio'=> "Currently I'm attending Northern Kentucky University majoring in Applied Software Engineering. I transferred from a community college after getting my Associate's degree. Some languages I'm proficient in are C#, Javascript, and HTML & CSS. I also have experience using GIT and Github.",
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
 			'job_experience' => [
 				//job 1
 				[
-					'job_title' => '',
-					'company_name'=> '',
-					'start_and_end_dates'=> '',
-					'job_summary'=> '',
+					'job_title' => 'IT Support',
+					'company_name'=> 'Maysville Community and Technical College',
+					'start_and_end_dates'=> '2021 - Present',
+					'job_summary'=> 'A student worker position in the IT department at Maysville Community and Technical College. Consists of assisting with computer problems, network issues, and printing issues.',
+					'achievement_header'=> '',
+					//array contains a list of your achievements on the job
+					'achievements' => [
+						'',
+						'',
+						''
+					],
+					//array contains each technology used on the job
+					'technologies_used' => [
+						''
+					]
+				],
+				//job 2
+				[
+					'job_title' => 'Work-Based Learning IT Job',
+					'company_name'=> 'Bracken County High School',
+					'start_and_end_dates'=> '2020 - 2021',
+					'job_summary'=> 'A Work-Based learning IT job completed during Senior year of High School. Consisted of assisting students and teachers with computer problems and repairing Chromebooks.',
 					'achievement_header'=> '',
 					//array contains a list of your achievements on the job
 					'achievements' => [
@@ -244,10 +262,11 @@
 				]
 			],
 			'skills' => [
-				'',
-				'',
-				'',
-				'',
+				'C#',
+				'Java',
+				'JavaScript',
+				'Node.js',
+				'HTML/CSS'
 			],
 			'other_skills' => [
 				'',
@@ -263,24 +282,24 @@
 			'education' => [
 				//scool 1
 				[
-					'study'=> '',
-					'school_name'=> '',
-					'start_and_end_dates' => ''
+					'study'=> 'BSc Applied Software Engineering',
+					'school_name'=> 'Northern Kentucky University',
+					'start_and_end_dates' => '2023 - 2026'
 				],
 				//scool 2
 				[
-					'study'=> '',
-					'school_name' => '',
-					'start_and_end_dates' => ''
+					'study'=> 'ASc Information Technology',
+					'school_name' => 'Maysville Community and Technical College',
+					'start_and_end_dates' => '2021 - 2022'
 				]
 			],
 			'languages' => [
-				''
+				'English'
 			],
 			'interests'=> [
-				'',
-				'',
-				''
+				'Gaming',
+				'Running',
+				'Movies'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
@@ -289,20 +308,8 @@
 				//project 1
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => '',
-				],
-				//project 2
-				[
-					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
-				],
-				//project 3
-				[
-					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
+					'project_name' => 'Midwest Music Site',
+					'project_goal' => 'A website to post reviews of concerts.',
 				]
 			]
 		],
