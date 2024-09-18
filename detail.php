@@ -415,14 +415,15 @@
 	// Grabbing id value from query string and setting to 0 if not filled out.
 	$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
-	// Storing array for selected team member in data variable.
+	// Storing array data for selected team member in variables.
 	$data = $team_members[$id];
+	$education = $data['education'];
 	
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title><?php echo $data['firstname'] . ' ' . $data['lastname'] ?> Resume</title>
+    <title><?= $data['firstname'] . ' ' . $data['lastname'] ?> Resume</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -663,16 +664,17 @@
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Education</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled">
-								    <li class="mb-2">
-								        <div class="resume-degree font-weight-bold">MSc in Computer Science</div>
-								        <div class="resume-degree-org">University College London</div>
-								        <div class="resume-degree-time">2013 - 2014</div>
-								    </li>
-								    <li>
-								        <div class="resume-degree font-weight-bold">BSc Maths and Physics</div>
-								        <div class="resume-degree-org">Imperial College London</div>
-								        <div class="resume-degree-time">2010 - 2013</div>
-								    </li>
+									<?php
+										// looping through education array for member and adding degrees to page.
+										foreach($education as $e) {
+											echo 
+											'<li>
+								        		<div class="resume-degree font-weight-bold">' . $e["study"] . '</div>
+								        		<div class="resume-degree-org">' . $e["school_name"] . '</div>
+								        		<div class="resume-degree-time">' . $e["start_and_end_dates"] . '</div>
+								    		</li>';
+										}
+									?>
 							    </ul>
 						    </div>
 					    </section><!--//education-section-->
