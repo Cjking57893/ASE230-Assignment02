@@ -412,11 +412,17 @@
 		]
 	];
 
+	// Grabbing id value from query string and setting to 0 if not filled out.
+	$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+
+	// Storing array for selected team member in data variable.
+	$data = $team_members[$id];
+	
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Your name's Resume</title>
+    <title><?php echo $data['firstname'] . ' ' . $data['lastname'] ?> Resume</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
