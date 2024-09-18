@@ -666,12 +666,12 @@
 							    <ul class="list-unstyled">
 									<?php
 										// looping through education array for member and adding degrees to page.
-										foreach($education as $e) {
+										foreach($education as $degree) {
 											echo 
 											'<li>
-								        		<div class="resume-degree font-weight-bold">' . $e["study"] . '</div>
-								        		<div class="resume-degree-org">' . $e["school_name"] . '</div>
-								        		<div class="resume-degree-time">' . $e["start_and_end_dates"] . '</div>
+								        		<div class="resume-degree font-weight-bold">' . $degree["study"] . '</div>
+								        		<div class="resume-degree-org">' . $degree["school_name"] . '</div>
+								        		<div class="resume-degree-time">' . $degree["start_and_end_dates"] . '</div>
 								    		</li>';
 										}
 									?>
