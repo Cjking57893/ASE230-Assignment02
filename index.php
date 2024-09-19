@@ -473,8 +473,8 @@
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Member 2 name</h1>
-							    <div class="title mb-3">Member 2 role</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[1]['firstname'].' '.$team_members[1]['lastname']?></h1>
+							    <div class="title mb-3"><?=$team_members[1]['team_role']?></div>
 								<a href="#<?php /*LINK_TO_MEMBER_2_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
@@ -493,8 +493,8 @@
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Member 3 name</h1>
-							    <div class="title mb-3">Member 3 role</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[2]['firstname'].' '.$team_members[2]['lastname']?></h1>
+							    <div class="title mb-3"><?=$team_members[2]['team_role']?></div>
 								<a href="#<?php /*LINK_TO_MEMBER_3_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
@@ -513,8 +513,8 @@
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Member 4 name</h1>
-							    <div class="title mb-3">Member 4 role</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[3]['firstname'].' '.$team_members[3]['lastname']?></h1>
+							    <div class="title mb-3"><?=$team_members[3]['team_role']?></div>
 								<a href="#<?php /*LINK_TO_MEMBER_1_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
