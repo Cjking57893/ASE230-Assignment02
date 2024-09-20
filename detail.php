@@ -419,6 +419,7 @@
 	$data = $team_members[$id];
 	$education = $data['education'];
 	$languages = $data['languages'];
+	$projects = $data['projects'];
 	
 ?>
 <!DOCTYPE html>
@@ -725,36 +726,21 @@
 				<section class="resume-section experience-section mb-5">
 					<h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Projects</h2>
 					<div class="row mt-4">
-						<div class="col-md-4">
-							<div class="card">
-								<img src="path-to-project-image1.jpg" alt="Project 1" class="card-img-top">
-								<div class="card-body">
-									<h5 class="card-title">Project 1</h5>
-									<p class="card-text">Brief description of Project 1.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<img src="path-to-project-image2.jpg" alt="Project 2" class="card-img-top">
-								<div class="card-body">
-									<h5 class="card-title">Project 2</h5>
-									<p class="card-text">Brief description of Project 2.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="card">
-								<img src="path-to-project-image3.jpg" alt="Project 3" class="card-img-top">
-								<div class="card-body">
-									<h5 class="card-title">Project 3</h5>
-									<p class="card-text">Brief description of Project 3.</p>
-									<a href="btn btn-outline-primary" href="#">Go to link</a>
-								</div>
-							</div>
-						</div>
+						<?php
+							foreach($projects as $project) {
+								echo
+								'<div class="col-md-4">
+								 	<div class="card">
+										<img src="' . $project['project_img_path'] . '" alt="' . $project['project_name'] . '" class="card-img-top">
+										<div class="card-body">
+											<h5 class="card-title">' . $project['project_name'] . '</h5>
+											<p class="card-text">' . $project['project_goal'] . '</p>
+											<a href="btn btn-outline-primary" href="#">Go to link</a>
+										</div>
+									</div>
+								</div>';
+							}
+						?>
 					</div>
 				</section><!--//projects-section-->
 		    </div><!--//resume-body-->
