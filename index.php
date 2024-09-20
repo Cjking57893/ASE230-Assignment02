@@ -32,7 +32,7 @@
 	<?php
 	$team_members=[
 		[
-			'img_path' => 'assets/images/profile.jpg',
+			'img_path' => 'assets\images\Chris_Profile.jpg',
 			'firstname'=>'Chris',
 			'lastname'=>'King',
 			'team_role' => 'Programmer',
@@ -139,7 +139,7 @@
 			],
 		],
 		[
-			'img_path' => '',
+			'img_path' => 'assets\images\Alanna_Profile.jpg',
 			'firstname'=>'Alanna',
 			'lastname'=>'Evans',
 			'team_role' => 'Programmer',
@@ -240,7 +240,7 @@
 			]
 		],
 		[
-			'img_path' => '',
+			'img_path' => 'assets\images\Cody_Profile.jpg',
 			'firstname'=>'Cody',
 			'lastname'=>'King',
 			'team_role' => 'Programmer',
@@ -344,52 +344,52 @@
 			]
 		],
 		[	
-			'img_path' => '',
+			'img_path' => 'assets\images\Tyler_Profile.jpg',
 			'firstname'=>'Tyler',
-			'lastname'=>'',
-			'team_role' => '',
-			'email' => '',
-			'phone_number' => '',
-			'linked_in' => '',
-			'github' => '',
-			'website' => '',
-			'bio'=> '',
+			'lastname'=>'White',
+			'team_role' => 'Programmer',
+			'email' => 'Whitet27@mymail.nku.edu',
+			'phone_number' => '859-468-0761',
+			'linked_in' => 'https://linkedin.com/in/tylerwhite2023',
+			'github' => 'https://github.com/clickersb',
+			'website' => 'N/A',
+			'bio'=> 'My name is Tyler White and I am a sophmore at Northern Kentucky University studying Cybersecurity.',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
 			'job_experience' => [
 				//job 1
 				[
-					'job_title' => '',
-					'company_name'=> '',
-					'start_and_end_dates'=> '',
-					'job_summary'=> '',
-					'achievement_header'=> '',
+					'job_title' => 'Server/Host',
+					'company_name'=> 'Washington Square',
+					'start_and_end_dates'=> 'July 2023 - present',
+					'job_summary'=> 'At The Washington Square, I provide exceptional customer service, ensuring guests\' needs are met promptly and professionally. Since July 2022, I\'ve managed seating and wait times, optimized service flow, and facilitated communication between staff. I\'ve developed strong time management skills in a fast-paced environment and adapted to unpredictable situations, contributing to a positive team dynamic and the restaurant\'s success.',
+					'achievement_header'=> 'Here are some achievements I have accomplished while at the Washington Square',
 					//array contains a list of your achievements on the job
 					'achievements' => [
-						'',
-						'',
-						''
+						'Lead and controlled traffic of multiple record-breaking hours, reaching over $1500 in sales',
+						'Help improve adaptability in unpredictable interactions with customers',
+						'Used important attention to detail abilities to make sure the restaurant runs smoothly.'
 					],
 					//array contains each technology used on the job
 					'technologies_used' => [
-						''
+						'Clover'
 					]
 				]
 			],
 			'skills' => [
-				'',
-				'',
-				'',
-				'',
+				'Linux',
+				'Java',
+				'IT Skills',
+				'Security+',
 			],
 			'other_skills' => [
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Office 365',
+				'Windows 10/11',
+				'Python',
+				'PHP',
+				'HTML',
+				'Network Management'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['education'][$i]['study/school_name/start_and_end_dates']
@@ -397,24 +397,24 @@
 			'education' => [
 				//school 1
 				[
-					'study'=> '',
-					'school_name'=> '',
-					'start_and_end_dates' => ''
+					'study'=> 'Bachelor of Science in Cybersecurity',
+					'school_name'=> 'Northern Kentucky University',
+					'start_and_end_dates' => '2023-2026'
 				],
 				//school 2
 				[
-					'study'=> '',
-					'school_name' => '',
-					'start_and_end_dates' => ''
+					'study'=> 'Associates of Science',
+					'school_name' => 'Gateway Community and Technical College',
+					'start_and_end_dates' => '2021-2023'
 				]
 			],
 			'languages' => [
-				''
+				'English'
 			],
 			'interests'=> [
-				'',
-				'',
-				''
+				'Skiing',
+				'Working out',
+				'Video Games'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
@@ -448,14 +448,14 @@
 		    <header class="resume-header pt-4 pt-md-0">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
+				        <img class="picture" src="<?= $team_members[0]['img_path'] ?>" alt="">
 				    </div><!--//col-->
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[0]['firstname'].' '.$team_members[0]['lastname']?></h1>
 							    <div class="title mb-3"><?=$team_members[0]['team_role']?></div>
-								<a href="detail.php?index=<?=0?>" class="btn btn-secondary">See full profile</a>
+								<a href="detail.php?id=<?=0?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 						    </div><!--//secondary-info-->
@@ -468,14 +468,14 @@
 		    <header class="resume-header mt-4 pt-4 pt-md-0">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
+				        <img class="picture" src="<?= $team_members[1]['img_path'] ?>" alt="">
 				    </div><!--//col-->
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[1]['firstname'].' '.$team_members[1]['lastname']?></h1>
 							    <div class="title mb-3"><?=$team_members[1]['team_role']?></div>
-								<a href="#<?php /*LINK_TO_MEMBER_2_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
+								<a href="detail.php?id=<?=1?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 						    </div><!--//secondary-info-->
@@ -488,14 +488,14 @@
 		    <header class="resume-header mt-4 pt-4 pt-md-0">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
+				        <img class="picture" src="<?= $team_members[2]['img_path'] ?>" alt="">
 				    </div><!--//col-->
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[2]['firstname'].' '.$team_members[2]['lastname']?></h1>
 							    <div class="title mb-3"><?=$team_members[2]['team_role']?></div>
-								<a href="#<?php /*LINK_TO_MEMBER_3_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
+								<a href="detail.php?id=<?=2?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 						    </div><!--//secondary-info-->
@@ -508,14 +508,14 @@
 			<header class="resume-header mt-4">
 			    <div class="row">
 				    <div class="col-block col-md-auto resume-picture-holder text-center text-md-start">
-				        <img class="picture" src="assets/images/profile.jpg" alt="">
+				        <img class="picture" src="<?= $team_members[3]['img_path'] ?>" alt="">
 				    </div><!--//col-->
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
 							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?=$team_members[3]['firstname'].' '.$team_members[3]['lastname']?></h1>
 							    <div class="title mb-3"><?=$team_members[3]['team_role']?></div>
-								<a href="#<?php /*LINK_TO_MEMBER_1_PAGE*/ ?>" class="btn btn-secondary">See full profile</a>
+								<a href="detail.php?id=<?=3?>" class="btn btn-secondary">See full profile</a>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 						    </div><!--//secondary-info-->
@@ -530,7 +530,7 @@
     
     <footer class="footer text-center pt-2 pb-5">
 	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your names</small>
+        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <?= $team_members[0]['firstname'] . ', ' . $team_members[1]['firstname'] . ', ' . $team_members[2]['firstname'] . ', ' . $team_members[3]['firstname'] ?></small>
     </footer>
 
     
