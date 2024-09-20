@@ -417,6 +417,8 @@
 
 	// Storing array data for selected team member in variables.
 	$data = $team_members[$id];
+	$skills = $data['skills'];
+	$other_skills = $data['other_skills'];
 	$education = $data['education'];
 	$languages = $data['languages'];
 	$interests = $data['interests'];
@@ -614,51 +616,28 @@
 						    <div class="resume-section-content">
 						        <div class="resume-skill-item">
 							        <ul class="list-unstyled mb-4">
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Angular</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">React</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 94%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">JavaScript</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        
-								        <li class="mb-2">
-								            <div class="resume-skill-name">Node.js</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 92%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
-								        <li class="mb-2">
-								            <div class="resume-skill-name">HTML/CSS/SASS/LESS</div>
-									        <div class="progress resume-progress">
-											    <div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 96%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-											</div>
-								        </li>
+										<?php
+											foreach($skills as $skill) {
+												echo
+												'<li class="mb-2">
+								            	 	<div class="resume-skill-name">' . $skill . '</div>
+													<div class="progress resume-progress">
+														<div class="progress-bar theme-progress-bar-dark" role="progressbar" style="width: 98%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+								        		</li>';
+											}
+										?>
 							        </ul>
 						        </div><!--//resume-skill-item-->
 						        <div class="resume-skill-item">
 						            <h4 class="resume-skills-cat font-weight-bold">Others</h4>
 						            <ul class="list-inline">
-							            <li class="list-inline-item"><span class="badge badge-light">DevOps</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Code Review</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Git</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Unit Testing</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Wireframing</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Sketch</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Balsamiq</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">WordPress</span></li>
-							            <li class="list-inline-item"><span class="badge badge-light">Shopify</span></li>
+							            <?php
+											foreach($other_skills as $other_skill) {
+												echo
+												'<li class="list-inline-item"><span class="badge badge-light">' . $other_skill . '</span></li>';
+											}
+										?>
 						            </ul>
 						        </div><!--//resume-skill-item-->
 						    </div><!--resume-section-content-->
