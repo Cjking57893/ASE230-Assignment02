@@ -316,50 +316,50 @@
 		[	
 			'img_path' => '',
 			'firstname'=>'Tyler',
-			'lastname'=>'',
-			'team_role' => '',
-			'email' => '',
-			'phone_number' => '',
-			'linked_in' => '',
-			'github' => '',
-			'website' => '',
-			'bio'=> '',
+			'lastname'=>'White',
+			'team_role' => 'Programmer',
+			'email' => 'Whitet27@mymail.nku.edu',
+			'phone_number' => '859-468-0761',
+			'linked_in' => 'https://linkedin.com/in/tylerwhite2023',
+			'github' => 'https://github.com/clickersb',
+			'website' => 'N/A',
+			'bio'=> 'My name is Tyler White and I am a sophmore at Northern Kentucky University studying Cybersecurity.',
 			/*Access in loop using iterator
 			*EX: $team_members['job_experience'][$i]['job_title/company_name/job_summary/etc.']
 			*/
 			'job_experience' => [
 				//job 1
 				[
-					'job_title' => '',
-					'company_name'=> '',
-					'start_and_end_dates'=> '',
-					'job_summary'=> '',
-					'achievement_header'=> '',
+					'job_title' => 'Server/Host',
+					'company_name'=> 'Washington Square',
+					'start_and_end_dates'=> 'July 2023 - present',
+					'job_summary'=> 'At The Washington Square, I provide exceptional customer service, ensuring guests\' needs are met promptly and professionally. Since July 2022, I\'ve managed seating and wait times, optimized service flow, and facilitated communication between staff. I\'ve developed strong time management skills in a fast-paced environment and adapted to unpredictable situations, contributing to a positive team dynamic and the restaurant\'s success.',
+					'achievement_header'=> 'Here are some achievements I have accomplished while at the Washington Square',
 					//array contains a list of your achievements on the job
 					'achievements' => [
-						'',
-						'',
-						''
+						'Lead and controlled traffic of multiple record-breaking hours, reaching over $1500 in sales',
+						'Help improve adaptability in unpredictable interactions with customers',
+						'Used important attention to detail abilities to make sure the restaurant runs smoothly.'
 					],
 					//array contains each technology used on the job
 					'technologies_used' => [
-						''
+						'Clover'
 					]
 				]
 			],
 			'skills' => [
-				'',
-				'',
-				'',
-				'',
+				'Linux',
+				'Java',
+				'IT Skills',
+				'Security+',
 			],
 			'other_skills' => [
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Office 365',
+				'Windows 10/11',
+				'Python',
+				'PHP',
+				'HTML',
+				'Network Management'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['education'][$i]['study/school_name/start_and_end_dates']
@@ -367,24 +367,24 @@
 			'education' => [
 				//school 1
 				[
-					'study'=> '',
-					'school_name'=> '',
-					'start_and_end_dates' => ''
+					'study'=> 'Bachelor of Science in Cybersecurity',
+					'school_name'=> 'Northern Kentucky University',
+					'start_and_end_dates' => '2023-2026'
 				],
 				//school 2
 				[
-					'study'=> '',
-					'school_name' => '',
-					'start_and_end_dates' => ''
+					'study'=> 'Associates of Science',
+					'school_name' => 'Gateway Community and Technical College',
+					'start_and_end_dates' => '2021-2023'
 				]
 			],
 			'languages' => [
-				''
+				'English'
 			],
 			'interests'=> [
-				'',
-				'',
-				''
+				'Skiing',
+				'Working out',
+				'Video Games'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
@@ -416,20 +416,20 @@
 	$id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
 
 	// Storing array data for selected team member in variables.
-	$data = $team_members[$id];
-	$skills = $data['skills'];
-	$other_skills = $data['other_skills'];
-	$job_experience = $data['job_experience'];
-	$education = $data['education'];
-	$languages = $data['languages'];
-	$interests = $data['interests'];
-	$projects = $data['projects'];
+	$member = $team_members[$id];
+	$skills = $member['skills'];
+	$other_skills = $member['other_skills'];
+	$job_experience = $member['job_experience'];
+	$education = $member['education'];
+	$languages = $member['languages'];
+	$interests = $member['interests'];
+	$projects = $member['projects'];
 	
 ?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title><?= $data['firstname'] . ' ' . $data['lastname'] ?> Resume</title>
+    <title><?= $member['firstname'] . ' ' . $member['lastname'] ?> Resume</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -464,18 +464,18 @@
 				    <div class="col">
 					    <div class="row p-4 justify-content-center justify-content-md-between">
 						    <div class="primary-info col-auto">
-							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase">Your name</h1>
-							    <div class="title mb-3">Your desired job title</div>
+							    <h1 class="name mt-0 mb-1 text-white text-uppercase text-uppercase"><?= $member['firstname'] . ' ' . $member['lastname'] ?></h1>
+							    <div class="title mb-3"><?= $member['team_role'] ?></div>
 							    <ul class="list-unstyled">
-								    <li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i>your@email.com</a></li>
-								    <li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i>0123 456 78900</a></li>
+								    <li class="mb-2"><a class="text-link" href="#"><i class="far fa-envelope fa-fw me-2" data-fa-transform="grow-3"></i><?= $member['email'] ?></a></li>
+								    <li><a class="text-link" href="#"><i class="fas fa-mobile-alt fa-fw me-2" data-fa-transform="grow-6"></i><?= $member['phone_number'] ?></a></li>
 							    </ul>
 						    </div><!--//primary-info-->
 						    <div class="secondary-info col-auto mt-2">
 							    <ul class="resume-social list-unstyled">
-					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span>linkedin.com/in/yourlink</a></li>
-					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span>github.com/yourhandle</a></li>
-					                <li><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span>yourwebsite.com</a></li>
+					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-linkedin-in fa-fw"></i></span><?= $member['linked_in'] ?></a></li>
+					                <li class="mb-3"><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fab fa-github-alt fa-fw"></i></span><?= $member['github'] ?></a></li>
+					                <li><a class="text-link" href="#"><span class="fa-container text-center me-2"><i class="fas fa-globe"></i></span><?= $member['website'] ?></a></li>
 							    </ul>
 						    </div><!--//secondary-info-->
 					    </div><!--//row-->
@@ -487,7 +487,7 @@
 			    <section class="resume-section summary-section mb-5">
 				    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Summary</h2>
 				    <div class="resume-section-content">
-					    <p class="mb-0">Summarise your education and professional experience here. Add a couple of fun facts. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque congue elit ut nisi vehicula iaculis. Integer porta nisi erat, quis gravida quam dignissim ut. Nullam tincidunt mollis finibus. Vestibulum et diam vel tellus blandit convallis non id mauris. Curabitur feugiat tincidunt ante, ut iaculis sem. Sed eleifend fringilla diam, quis vehicula tellus fringilla sed. In sagittis commodo ipsum pulvinar sagittis. Ut et turpis sit amet erat elementum convallis ac eu ipsum. Aenean varius eget mi in mollis. Integer tempus diam libero, id blandit neque aliquam non. Maecenas eleifend leo ut pellentesque bibendum. Phasellus consectetur facilisis nunc, at ultricies nisi eleifend eget. Fusce molestie et orci non pulvinar. Aenean ac tristique orci, vitae viverra mi.</p>
+					    <p class="mb-0"><?= $member['bio'] ?></p>
 				    </div>
 			    </section><!--//summary-section-->
 			    <div class="row">
@@ -670,7 +670,7 @@
     
     <footer class="footer text-center pt-2 pb-5">
 	    <!--/* This template is free as long as you keep the footer attribution link. If you'd like to use the template without the attribution link, you can buy the commercial license via our website: themes.3rdwavemedia.com Thank you for your support. :) */-->
-        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by Your names</small>
+        <small class="copyright">Designed with <span class="sr-only">love</span><i class="fas fa-heart"></i> by <?= $team_members[0]['firstname'] . ', ' . $team_members[1]['firstname'] . ', ' . $team_members[2]['firstname'] . ', ' . $team_members[3]['firstname'] ?></small>
     </footer>
 
     
