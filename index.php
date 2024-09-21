@@ -110,6 +110,11 @@
 				'Skateboarding',
 				'cooking'
 			],
+			'awards' => [
+				'Dean\'s List - Northern Kentucky University',
+				'Dean\'s List - Indiana University Southeast'
+			],
+		
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -215,6 +220,11 @@
 				'Pool',
 				'Video Games'
 			],
+			'awards' => [
+				'President\'s List - Northern Kentucky University',
+				'Dean\'s List - Northern Kentucky University'
+			],
+		
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -331,6 +341,11 @@
 				'Running',
 				'Movies'
 			],
+			'awards' => [
+				'Dean\'s List - Maysville Community and Technical College',
+				'Dean\'s List - Northern Kentucky University'
+			],
+		
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -416,6 +431,12 @@
 				'Working out',
 				'Video Games'
 			],
+			'awards' => [
+				'Dean\'s List – Gateway Community and Technical College',
+				'Dean\'s List - Northern Kentucky University'
+			],
+		
+		
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
