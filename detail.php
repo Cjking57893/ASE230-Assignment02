@@ -80,6 +80,10 @@
 				'Skateboarding',
 				'cooking'
 			],
+			'awards' => [
+				'Dean\'s List - Northern Kentucky University',
+				'Dean\'s List - Indiana University Southeast'
+			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -184,6 +188,10 @@
 				'Hiking',
 				'Pool',
 				'Video Games'
+			],
+			'awards' => [
+				'President\'s List - Northern Kentucky University',
+				'Dean\'s List - Northern Kentucky University'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
@@ -299,6 +307,10 @@
 				'Running',
 				'Movies'
 			],
+			'awards' => [
+				'Dean\'s List - Maysville Community and Technical College',
+				'Dean\'s List - Northern Kentucky University'
+			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -384,6 +396,10 @@
 				'Working out',
 				'Video Games'
 			],
+			'awards' => [
+				'Dean\'s List – Gateway Community and Technical College',
+				'Dean\'s List - Northern Kentucky University'
+			],
 			/*Access in loop using iterator
 			*EX: $team_members['projects'][$i]['project_name/project_goal']
 			*/
@@ -391,20 +407,20 @@
 				//project 1
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => '',
+					'project_name' => 'Password Cracking Simulation',
+					'project_goal' => ' I set up a virtual machine environment and used tools like John the Ripper to test weak password policies and analyze hashing algorithms. This project taught me the importance of encryption and strong password practices.',
 				],
 				//project 2
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
+					'project_name' => 'Network Traffic Analysis',
+					'project_goal' => 'I monitored and analyzed network traffic using Wireshark to identify potential security threats, including malicious packets, and compiled a report on my findings. This project helped me build skills in packet analysis and network security.'
 				],
 				//project 3
 				[
 					'project_img_path' => '',
-					'project_name' => '',
-					'project_goal' => ''
+					'project_name' => 'Vulnerability Assessment',
+					'project_goal' => ' I conducted a vulnerability assessment using OpenVAS to scan a virtual server, identifying risks and providing remediation recommendations. This project enhanced my understanding of system vulnerabilities and how to mitigate them.'
 				]
 			]
 		]
@@ -421,6 +437,7 @@
 	$education = $member['education'];
 	$languages = $member['languages'];
 	$interests = $member['interests'];
+	$awards = $member['awards'];
 	$projects = $member['projects'];
 	
 ?>
@@ -580,7 +597,6 @@
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled">
 									<?php
-										// looping through education array for member and adding degrees to page.
 										foreach($education as $degree) {
 											echo 
 											'<li>
@@ -597,16 +613,15 @@
 						    <h2 class="resume-section-title text-uppercase font-weight-bold pb-3 mb-3">Awards</h2>
 						    <div class="resume-section-content">
 							    <ul class="list-unstyled resume-awards-list">
-								    <li class="mb-2 ps-4 position-relative">
-								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-								        <div class="resume-award-name">Award Name Lorem</div>
-								        <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo.</div>
-								    </li>
-								    <li class="mb-0 ps-4 position-relative">
-								        <i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
-								        <div class="resume-award-name">Award Name Ipsum</div>
-								        <div class="resume-award-desc">Award desc goes here, ultricies nec, pellentesque.</div>
-								    </li>
+									<?php
+										foreach($awards as $award) {
+											echo
+											'<li class="mb-2 ps-4 position-relative">
+								        		<i class="resume-award-icon fas fa-trophy position-absolute" data-fa-transform="shrink-2"></i>
+								        		<div class="resume-award-name">' . $award . '</div>
+								    		</li>';
+										}
+									?>
 							    </ul>
 						    </div>
 					    </section><!--//interests-section-->
@@ -647,7 +662,6 @@
 								echo
 								'<div class="col-md-4">
 								 	<div class="card">
-										<img src="' . $project['project_img_path'] . '" alt="' . $project['project_name'] . '" class="card-img-top">
 										<div class="card-body">
 											<h5 class="card-title">' . $project['project_name'] . '</h5>
 											<p class="card-text">' . $project['project_goal'] . '</p>
