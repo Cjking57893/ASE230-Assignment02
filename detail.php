@@ -230,16 +230,18 @@
 					'company_name'=> 'Maysville Community and Technical College',
 					'start_and_end_dates'=> '2021 - Present',
 					'job_summary'=> 'A student worker position in the IT department at Maysville Community and Technical College. Consists of assisting with computer problems, network issues, and printing issues.',
-					'achievement_header'=> '',
+					'achievement_header'=> 'These are some achievements I completed at this job',
 					//array contains a list of your achievements on the job
 					'achievements' => [
-						'',
-						'',
-						''
+						'Assisted in transition to webex phone system',
+						'Set up networking for new aviation building',
+						'Helped with printer upgrades'
 					],
 					//array contains each technology used on the job
 					'technologies_used' => [
-						''
+						'Active Directory',
+						'VNC',
+						'Teamviewer'
 					]
 				],
 				//job 2
@@ -248,16 +250,15 @@
 					'company_name'=> 'Bracken County High School',
 					'start_and_end_dates'=> '2020 - 2021',
 					'job_summary'=> 'A Work-Based learning IT job completed during Senior year of High School. Consisted of assisting students and teachers with computer problems and repairing Chromebooks.',
-					'achievement_header'=> '',
+					'achievement_header'=> 'These are some achievements I completed at this job',
 					//array contains a list of your achievements on the job
 					'achievements' => [
-						'',
-						'',
-						''
+						'Helped with assisting students and teachers with Technical problems',
+						'Repaired chromebooks with various broken parts (screen, keyboard, trackpad, etc)'
 					],
 					//array contains each technology used on the job
 					'technologies_used' => [
-						''
+						'Repair tools for Chromebooks'
 					]
 				]
 			],
@@ -269,12 +270,9 @@
 				'HTML/CSS'
 			],
 			'other_skills' => [
-				'',
-				'',
-				'',
-				'',
-				'',
-				''
+				'Git/Github',
+				'Linux',
+				'Command Prompt'
 			],
 			/*Access in loop using iterator
 			*EX: $team_members['education'][$i]['study/school_name/start_and_end_dates']
